@@ -1,0 +1,23 @@
+.header-logo__text {
+  margin-top: -0.1rem;
+  margin-right: 0.6rem;
+  text-align: center;
+  @include font(400, 1rem, 100%);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  &_color {
+    color: #959aae;
+  }
+}
+
+@media (max-width: 48em) {
+  .header-logo__text {
+    display: block;
+    margin-left: 1.8rem;
+    margin-top: -0.5rem;
+
+    @include font(400, 0.8rem, 150%);
+    letter-spacing: 0.16em;
+  }
+}

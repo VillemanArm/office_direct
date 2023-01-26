@@ -1,0 +1,11 @@
+.header__tel {
+  @include center;
+  padding-right: 1.1rem;
+  padding-top: 0.3rem;
+}
+
+@media (max-width: 48em) {
+  .header__tel {
+    display: none;
+  }
+}

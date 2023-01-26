@@ -1,0 +1,12 @@
+.header__navigation-link {
+  font-family: "Inter";
+  @include font(500, 1.6rem, 140%);
+
+  &_color {
+    color: #2b3350;
+  }
+}
+
+.header__navigation-link:not(:last-child) {
+  margin-right: 3.15rem;
+}

@@ -1,0 +1,8 @@
+@media (max-width: 48em) {
+  .header__wrap {
+    width: 100%;
+    @include center;
+    justify-content: space-between;
+    position: relative;
+  }
+}

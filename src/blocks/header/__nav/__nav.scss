@@ -1,0 +1,11 @@
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 48em) {
+  .header__nav {
+    display: none;
+  }
+}

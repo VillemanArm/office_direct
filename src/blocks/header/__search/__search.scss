@@ -1,0 +1,26 @@
+.header__search {
+  width: 51rem;
+  height: 5.1rem;
+
+  padding-left: 5rem;
+
+  @include font(400, 1.6rem, 119%);
+
+  &_color {
+    background-image: url("../img/header/lens.svg");
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+    background-color: #f7f7f8;
+    background-position: 2.6rem 50%;
+
+    border-radius: 0.8rem;
+
+    color: #2b3350;
+  }
+}
+
+@media (max-width: 48em) {
+  .header__search {
+    display: none;
+  }
+}

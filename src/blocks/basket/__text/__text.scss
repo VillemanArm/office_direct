@@ -1,0 +1,15 @@
+.basket__text {
+  margin-right: 0.5rem;
+
+  @include font(500, 1.6rem, 140%);
+
+  &_color {
+    color: $primary-color;
+  }
+}
+
+@media (max-width: 48em) {
+  .basket__text {
+    display: none;
+  }
+}

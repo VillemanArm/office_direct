@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Samurai</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__info">
+                    <div class="header__burger">
+                        <img src="img/header/fill_mobile.svg" alt="меню">
+                    </div>
+                    <div class="header-logo">
+                        <div class="header-logo__img">
+                            <img src="img/header/logo.png" alt="Офис директ">
+                        </div>
+                        <span class="header-logo__text header-logo__text_color">кресла samurai</span>
+                    </div>
+                    <input type="search" class="header__search header__search_color"
+                        placeholder="Название модели или артикул">
+                    <div class="header__tel">
+                        <div class="header__tel-img">
+                            <img src="img/header/Calling.svg" alt="трубка">
+
+                        </div>
+                        <a class="header__tel-text header__tel-text_color" href="tel:+74952210675">+7 495 221-06-75</a>
+                    </div>
+                    <button type="button" class="button button__header button__header_color">Заказать звонок</button>
+                </div>
+                <div class="header__menu">
+                    <div class="header__nav">
+                        <div class="header__catalogue header__catalogue_color">
+                            <div class="header__catalogue-img">
+                                <img src="img/header/Fill.svg" alt="меню">
+                            </div>
+                            <span class="header__catalogue-text header__catalogue-text_color">Каталог</span>
+                        </div>
+                        <nav class="header__navigation">
+                            <a class="header__navigation-link header__navigation-link_color" href="#">О продукте</a>
+                            <a class="header__navigation-link header__navigation-link_color" href="#">Отзывы</a>
+                            <a class="header__navigation-link header__navigation-link_color" href="#">Доставка и
+                                оплата</a>
+                            <a class="header__navigation-link header__navigation-link_color" href="#">Контакты</a>
+                        </nav>
+                    </div>
+                    <div class="header__shop">
+                        <div class="header__location">
+                            <div class="header__send">
+                                <img src="img/header/send.svg" alt="стрелка">
+                            </div>
+                            <input class="header__cityes" type="text" list="cityes">
+                            <datalist id="cityes">
+                                <option value="Москва"></option>
+                                <option value="Санкт-Петербург"></option>
+                                <option value="Краснодар"></option>
+                            </datalist>
+                        </div>
+                        <div class="basket">
+                            <div class="basket__img">
+                                <img src="img/header/shopping-cart.svg" alt="корзина">
+                            </div>
+                            <a href="#" class="basket__text basket__text_color">Моя корзина</a>
+                            <div class="basket__count basket__count_color">+1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="advantages">
+                <div class="advantage-block">
+                    <div class="advantage-block__img">
+                        <img src="img/advantages/trolley.svg" alt="тележка">
+                    </div>
+                    <div class="advantage-block__wrap">
+                        <div class="advantage-block__description"><b>Бесплатная доставка</b> по Москве<br>и
+                            Санкт-Петербургу —
+                            от 3 шт.</div>
+                        <a href="#" class="advantage-block__link">Как получить?</a>
+                    </div>
+                </div>
+                <div class="advantage-block">
+                    <div class="advantage-block__img">
+                        <img src="img/advantages/chess.svg" alt="шахматы">
+                    </div>
+                    <div class="advantage-block__wrap">
+                        <div class="advantage-block__description"><b>Индивидуальные скидки</b><br>при заказе от 3 шт.
+                        </div>
+                        <a href="#" class="advantage-block__link">Смотреть условия</a>
+                    </div>
+                </div>
+                <div class="advantage-block">
+                    <div class="advantage-block__img">
+                        <img src="img/advantages/discount.svg" alt="тележка">
+                    </div>
+                    <div class="advantage-block__wrap">
+                        <div class="advantage-block__description">Для юридических лиц<br>действуют <b>особые условия</b>
+                        </div>
+                        <a href="#" class="advantage-block__link">Узнать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="catalogue">
+                <h2 class="catalogue__header">Каталог кресел</h2>
+                <div class="catalogue__cards">
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair1.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">24 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrap">
+                            <div class="card__img">
+                                <a href="#"><img src="img/catalogue/chair2.png" alt="товар"></a>
+                            </div>
+                            <h3 class="card__name">Samurai KL-1.04 Темно-коричневый</h3>
+                            <div class="card__price_new">23 000 ₽</div>
+                            <div class="card__price_old">27 000 ₽</div>
+                            <button type="submit" class="card__button card__button_color">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="button catalogue__show-all catalogue__show-all_color">Показать все</button>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    </div>
+</body>
+
+</html>

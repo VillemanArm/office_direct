@@ -1,0 +1,21 @@
+.header__catalogue {
+  width: 15.8rem;
+  height: 4.7rem;
+
+  @include center;
+  justify-content: center;
+  padding-right: 0.9rem;
+
+  margin-right: 4.25rem;
+
+  &_color {
+    background: #2b3350;
+    border-radius: 0px 12px 12px 12px;
+  }
+}
+
+@media (max-width: 48em) {
+  .header__catalogue {
+    display: none;
+  }
+}

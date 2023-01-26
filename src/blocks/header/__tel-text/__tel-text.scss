@@ -1,0 +1,7 @@
+.header__tel-text {
+  @include font(500, 1.9rem, 140%);
+
+  &_color {
+    color: $primary-color;
+  }
+}

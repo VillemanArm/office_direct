@@ -1,0 +1,16 @@
+.basket__img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 48em) {
+  .basket__img {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
+  }
+}

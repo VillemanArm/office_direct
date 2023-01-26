@@ -1,0 +1,16 @@
+.button__header {
+  padding: 1.55rem 2.85rem;
+
+  @include font(500, 1.6rem, 100%);
+  font-family: Inter;
+
+  &_color {
+    background: #f3f4f7;
+  }
+}
+
+@media (max-width: 48em) {
+  .button__header {
+    display: none;
+  }
+}

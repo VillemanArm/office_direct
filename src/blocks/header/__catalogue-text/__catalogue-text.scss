@@ -1,0 +1,7 @@
+.header__catalogue-text {
+  @include font(600, 1.7rem, 140%);
+
+  &_color {
+    color: #ffffff;
+  }
+}
