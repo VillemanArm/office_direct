@@ -1,23 +1,19 @@
-.catalogue {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .catalogue__header {
   margin-bottom: 2.1rem;
+
   @include font(900, 4.4rem, 120%);
+  text-align: center;
 }
 
 .catalogue__cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 27.8rem);
+
   justify-content: space-between;
-  position: relative;
 }
 
 .card {
-  width: 27.8rem;
+  width: 100%;
 
   position: relative;
 }
@@ -30,6 +26,10 @@
   flex-shrink: 0;
   padding-top: 3.5em;
   padding-bottom: 6.4rem;
+}
+
+.card__wrap_color {
+  color: $primary-color;
 }
 
 .card__img {
@@ -117,8 +117,12 @@
     font-size: 2.8rem;
   }
 
+  .catalogue__cards {
+    grid-template: repeat(3, 1fr) / repeat(2, 13.9rem);
+  }
+
   .card {
-    width: 13.9rem;
+    width: 100%;
 
     position: relative;
 
