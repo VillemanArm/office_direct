@@ -1,7 +1,6 @@
 .catalogue__header {
   margin-bottom: 2.1rem;
 
-  @include font(900, 4.4rem, 120%);
   text-align: center;
 }
 
@@ -55,8 +54,15 @@
 }
 
 .card__price_old {
+  position: relative;
   @include font(700, 2rem, 140%);
   letter-spacing: -0.05em;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 }
 
 .card__button {
