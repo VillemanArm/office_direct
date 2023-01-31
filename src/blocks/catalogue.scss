@@ -7,7 +7,6 @@
 .catalogue__cards {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 27.8rem);
-
   justify-content: space-between;
 }
 
@@ -124,11 +123,11 @@
   }
 
   .catalogue__cards {
-    grid-template: repeat(3, 1fr) / repeat(2, 13.9rem);
+    grid-template: repeat(3, 1fr) / repeat(2, auto);
   }
 
   .card {
-    width: 100%;
+    width: 13.9rem;
 
     position: relative;
 
