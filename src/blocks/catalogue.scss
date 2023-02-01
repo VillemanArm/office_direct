@@ -11,7 +11,7 @@
 }
 
 .card {
-  width: 100%;
+  // width: 100%;
 
   position: relative;
 }
@@ -45,14 +45,14 @@
   text-align: center;
 }
 
-.card__price_new {
+.card__price-new {
   margin-bottom: 0.3rem;
 
   @include font(900, 2.8rem, 140%);
   letter-spacing: -0.05em;
 }
 
-.card__price_old {
+.card__price-old {
   position: relative;
   @include font(700, 2rem, 140%);
   letter-spacing: -0.05em;
@@ -123,7 +123,7 @@
   }
 
   .catalogue__cards {
-    grid-template: repeat(3, 1fr) / repeat(2, auto);
+    grid-template: repeat(3, 1fr) / repeat(2, 13.9rem);
   }
 
   .card {
@@ -157,12 +157,12 @@
     margin-bottom: 0.2rem;
   }
 
-  .card__price_new {
+  .card__price-new {
     @include font(900, 2rem, 140%);
     margin-bottom: 0;
   }
 
-  .card__price_old {
+  .card__price-old {
     @include font(700, 1.7rem, 140%);
     margin-top: -0.2rem;
   }

@@ -1,12 +1,14 @@
 .testdrive 
   width: 100%
+  padding-bottom: 10.8rem
 
   &_color
     background-image: url("../img/testdrive/office.png")
     background-repeat: no-repeat
     background-position: center
+    background-position-y: -0.1rem
 
-.testdrive__wrap
+.testdrive__content
     margin-top: 9.2rem
     display: grid
     grid-template-columns: 68.2rem 1fr
@@ -22,7 +24,7 @@
   
   +font(400, 1.9rem, 160%)
 
-  margin-bottom: 3rem
+  margin-bottom: 2.9rem
 
 .testdrive__button
   padding: 2.5rem 4.85rem 2.9rem 4.85rem
@@ -45,7 +47,7 @@
     position: absolute
     width: 59.5rem
     height: 57.1rem
-    top: -7rem
+    top: -7.1rem
     left: -4.7rem
 
 @media (min-width: 48em)
@@ -54,14 +56,16 @@
     color: #0074D4
 
 @media (max-width: 48em)
+  .testdrive
+    padding-top: 0
+    padding-bottom: 0rem
+
   .testdrive_color
     background-color: #E5E5E5
-    background-position-y: 25rem
+    background-position-y: 18.3rem
 
 
-  .testdrive__wrap
-    margin-top: 6.8rem
-
+  .testdrive__content
     grid-template: repeat(2, auto) / 28.8rem
     justify-items: center
 
@@ -80,7 +84,7 @@
   .testdrive__description
     width: 100%
     
-    margin-bottom: 2.1rem
+    margin-bottom: 2.0rem
 
     font-size: 1.4rem
     text-align: center
