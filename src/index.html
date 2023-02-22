@@ -18,7 +18,12 @@
             <div class="header__wrap">
                 <div class="header__info">
                     <div class="header__burger">
-                        <img src="img/header/fill_mobile.svg" alt="меню">
+                        <div class="header__burger-fill">
+                            <img src="img/header/fill_mobile.svg" alt="меню">
+                        </div>
+                        <div class="header__burger-cross">
+                            <img src="img/header/cross.svg" alt="закрыть">
+                        </div>
                     </div>
                     <div class="header-logo">
                         <div class="header-logo__img">
@@ -87,13 +92,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="header__mobile-menu header__mobile-menu_color">
+                    <ul class="header__mobile-menu-list">
+                        <li class="header__mobile-menu-item"><a href="#">О продукте</a></li>
+                        <li class="header__mobile-menu-item"><a href="#">Отзывы</a></li>
+                        <li class="header__mobile-menu-item"><a href="#">Доставка и оплата</a></li>
+                        <li class="header__mobile-menu-item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <hr>
+                    <button type="button" class="button button__header button__header_color">Заказать звонок</button>
+                    <a class="header__mobile-menu-tel header__mobile-menu-tel_color" href="tel:+74952210675">+7 495
+                        221-06-75</a>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <div class="advantages">
+            <section class="advantages">
                 <div class="advantage-block">
                     <div class="advantage-block__img">
                         <img src="img/advantages/trolley.svg" alt="тележка">
@@ -125,10 +142,10 @@
                         <a href="#" class="advantage-block__link">Узнать подробнее</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
         <div class="container">
-            <div class="catalogue">
+            <section class="catalogue">
                 <h2 class="main-header catalogue__header">Каталог кресел</h2>
                 <div class="catalogue__cards">
                     <div class="card">
@@ -221,10 +238,10 @@
                     </div>
                 </div>
                 <button type="button" class="button catalogue__show-all catalogue__show-all_color">Показать все</button>
-            </div>
+            </section>
         </div>
 
-        <div class="testdrive testdrive_color">
+        <section class="testdrive testdrive_color">
             <div class="container">
                 <div class="testdrive__content">
                     <div class="testdrive__text">
@@ -242,13 +259,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="map">
+        </section>
+        <section class="map">
             <div id="map-element" class="map__element">
                 <script
                     src="https://api-maps.yandex.ru/2.1/?apikey=79090083-98bc-4c16-b42f-1f6395d1c399&lang=ru_RU"></script>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer></footer>
