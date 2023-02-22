@@ -1,11 +1,15 @@
 .header {
-  padding-top: 1.7rem;
-  padding-bottom: 1.4rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.4rem;
+
+    &_color {
+        background-color: #ffffff;
+    }
 }
 
 @media (max-width: 48em) {
-  .header {
-    padding-top: 0.7rem;
-    padding-bottom: 1.3rem;
-  }
+    .header {
+        padding-top: 0.7rem;
+        padding-bottom: 1.3rem;
+    }
 }
