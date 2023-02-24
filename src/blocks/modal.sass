@@ -1,0 +1,52 @@
+.modal
+    
+
+    width: 100%
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &__wrap
+        position: fixed
+        left: 0
+        top: 0
+        z-index: 2
+
+        &_color
+            background: rgba(255, 255, 255, 0.3)
+            backdrop-filter: blur(1rem)
+
+.modal__message
+    position: relative
+    width: 77.4rem
+    height: 36.8rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-top: 18.2rem
+
+    &_color
+        background-color: #FFFFFF
+        border: 1px solid #F3F4F7
+        box-shadow: 0 2.0rem 5.2rem -.8rem rgba(0, 0, 0, 0.15)
+        border-radius: 2.5rem
+
+.modal__check
+    position: absolute
+    width: 25rem
+    height: 25rem
+    top: -10.5rem
+    left: 50%
+    transform: translate(-50%, 0)
+
+.modal__header
+    margin-bottom: 1.5rem
+    
+    +font(700, 4.6rem, 120%)
+    text-align: center
+
+.modal__description
+    +font(400, 2rem, 100%)
+    text-align: center
