@@ -166,3 +166,26 @@ headerBurgerCross.addEventListener("click", () => {
     headerBurgerCross.style.display = "none";
     body.classList.remove("noscroll");
 });
+
+// modal
+
+const modal = document.querySelector(".modal"),
+    buttonsModal = document.querySelectorAll(".button__modal");
+
+buttonsModal.forEach((item) => {
+    item.addEventListener("click", () => {
+        modal.style.display = "flex";
+        body.classList.add("noscroll");
+    });
+});
+
+modal.addEventListener("click", (e) => {
+    const isModal = e.target.closest(".modal__message");
+
+    if (!isModal) {
+        modal.style.display = "none";
+        if (getComputedStyle(headerMobileMenu).display !== "flex") {
+            body.classList.remove("noscroll");
+        }
+    }
+});
