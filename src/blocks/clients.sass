@@ -1,0 +1,24 @@
+.clients
+    margin-bottom: 17rem
+    
+.clients__header
+    margin-bottom: 1.3rem
+
+.clients__list
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+
+.clients__logo
+    width: 15rem
+
+@media (max-width: 48em)
+    .clients
+        margin-bottom: 8rem
+
+    .clients__list
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 2.5rem
+
+    .clients__logo
+        width: 12.5rem
+        height: 6.4rem
