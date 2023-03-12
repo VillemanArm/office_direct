@@ -189,3 +189,27 @@ modal.addEventListener("click", (e) => {
         }
     }
 });
+
+//slider
+
+const swiper = new Swiper('.slider', {
+  // Optional parameters
+    loop: true,
+
+//   // If we need pagination
+  pagination: {
+    el: '.slider-pagination',
+    clickable: true,
+  },
+
+//   // Navigation arrows
+  navigation: {
+    nextEl: '.slider__arrow-right',
+    prevEl: '.slider__arrow-left',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});

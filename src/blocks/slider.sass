@@ -1,10 +1,21 @@
-.slider__item
+.slider
     width: 100%
     height: 64.1rem
+
+.slider__wrapper
+    width: 100%
+    height: 100%
+
+.slider__item
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
     
     &_color
         background-image: url("../img/slider/slide1.png")
         background-position-x: -0.6rem
+        background-size: cover
 
 .slider__content
     width: 62rem
@@ -29,3 +40,44 @@
     margin-bottom: 3.2rem
 
     +font(400, 2.1rem, 160%)
+
+.swiper-pagination-bullet
+    width: 0.6rem
+    height: 0.6rem
+
+.swiper-pagination-bullet-active
+    background-color: #2B3350
+
+.slider__arrow
+    width: 5rem
+    height: 5rem
+    display: flex
+
+.slider__arrow_color
+    border-radius: 50%
+    background: #FFFFFF
+    box-shadow: 0 1.2rem 2.0rem -0.8rem rgba(68, 88, 104, 0.25)
+
+.slider__arrow-img
+    width: 0.8rem
+    height: 1.4rem
+    margin: auto
+    align-items: center
+
+.slider__arrow-left
+    position: absolute
+    left: 4%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2
+
+.slider__arrow-right
+    position: absolute
+    left: 96.4%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2
+
+// .swiper-pagination-horizontal
+// //     position: absolute
+//     bottom: 30px
