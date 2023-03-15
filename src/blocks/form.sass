@@ -1,0 +1,105 @@
+.form
+    width: 180rem
+    height: 53.3rem
+    margin: auto
+    padding-top: 13.6rem
+
+    &_color
+        background-image: url('../img/form/background.png')
+        background-size: cover
+        background-position: center
+        border-radius: 1.6rem
+
+.form__header
+    margin-bottom: 0.9rem
+
+    +font(900, 4.4rem, 120%)
+    
+    color: #ffffff
+
+.form__description
+    max-width: 58.4rem
+    margin-bottom: 2.9rem
+
+    +font(300, 2.6rem, 150%)
+    
+    color: #ffffff
+
+.form__element-wrapper
+    margin-bottom: 2.3rem
+
+.form__input
+    width: 42.3rem
+    height: 7.75rem
+    margin-right: 1.4rem
+    padding-left: 7rem
+    padding-right: 3.6rem
+
+    &_color
+        +font(500, 1.8rem, 120%)
+
+        color: #ffffff
+        border: 0.1rem solid rgba(255, 255, 255, 0.3)
+        box-shadow: 0 .6rem 1.6rem rgba(255, 255, 255, 0.08)
+
+        &::placeholder
+            color: #ffffff
+
+.form__input-name
+    background: url('../img/form/user.svg') #576077 no-repeat 3.6rem 2.8rem 
+
+.form__input-tel
+    background: url('../img/form/phone.svg') #576077 no-repeat 3.6rem 2.8rem         
+
+.form__label-img
+    width: 2.4rem
+    height: 2.4rem
+
+.form__button
+    height: 7.85rem
+    padding-left: 7rem
+    padding-right: 7rem
+
+    &_color
+        +font(500, 1.8rem, 125%)
+        color: #FFFFFF
+        background: #0074D4
+        box-shadow: 0px 43px 51px rgba(0, 116, 212, 0.2), 0px 12.9632px 15.375px rgba(0, 116, 212, 0.241), 0px 5.38427px 6.38599px rgba(0, 116, 212, 0.15), 0px 1.94738px 2.30969px rgba(0, 116, 212, 0.059)
+        border-radius: .8rem
+
+
+
+.form__checkbox-label
+    cursor: pointer
+    display: flex
+
+    +font(300, 1.8rem, 122%)
+
+    color: #576077
+
+    &::before
+        content: ''
+        display: block
+        width: 2rem
+        height: 2rem
+        flex-shrink: 0
+        margin-right: 1.8rem
+
+        background: #576077
+        border: 1px solid #6F7487
+        border-radius: 5px
+
+.form__checkbox
+    position: absolute
+    width: 0.1rem
+    height: 0.1rem
+    margin: -0.1rem
+    padding: 0
+    clip: rect(0 0 0 0)
+    overflow: hiden
+    
+    &:checked+.form__checkbox-label:before
+        background: url('../img/form/checkmark.svg') #576077
+        background-size: 1.6rem
+        background-repeat: no-repeat
+        background-position: 0.2rem
