@@ -1,3 +1,6 @@
+.form__wrapper
+    position: relative
+
 .form
     width: 180rem
     height: 53.3rem
@@ -9,6 +12,17 @@
         background-size: cover
         background-position: center
         border-radius: 1.6rem
+
+.form__position
+    position: absolute
+    z-index: 2
+    left: 50%
+    transform: translate(-50%, 0)
+    top: -26.6rem
+
+.form>.container
+    position: relative
+    
 
 .form__header
     margin-bottom: 0.9rem
@@ -28,10 +42,15 @@
 .form__element-wrapper
     margin-bottom: 2.3rem
 
+    &::first-child
+        height: 8.1rem
+
 .form__input
+    position: relative
+    z-index: 2
     width: 42.3rem
-    height: 7.75rem
-    margin-right: 1.4rem
+    height: 8.1rem
+    margin-right: 1.2rem
     padding-left: 7rem
     padding-right: 3.6rem
 
@@ -56,9 +75,11 @@
     height: 2.4rem
 
 .form__button
-    height: 7.85rem
-    padding-left: 7rem
-    padding-right: 7rem
+    position: relative
+    z-index: 2
+    height: 7.9rem
+    padding-left: 7.3rem
+    padding-right: 7.3rem
 
     &_color
         +font(500, 1.8rem, 125%)
@@ -66,8 +87,6 @@
         background: #0074D4
         box-shadow: 0px 43px 51px rgba(0, 116, 212, 0.2), 0px 12.9632px 15.375px rgba(0, 116, 212, 0.241), 0px 5.38427px 6.38599px rgba(0, 116, 212, 0.15), 0px 1.94738px 2.30969px rgba(0, 116, 212, 0.059)
         border-radius: .8rem
-
-
 
 .form__checkbox-label
     cursor: pointer
@@ -103,3 +122,9 @@
         background-size: 1.6rem
         background-repeat: no-repeat
         background-position: 0.2rem
+
+.form__img
+    position: absolute
+    width: 73rem
+    top: -35rem
+    left: 55rem
