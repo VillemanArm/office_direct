@@ -240,3 +240,7 @@ form.addEventListener("submit", (e) => {
 
     form.reset();
 });
+
+// добавляем анимацию
+
+AOS.init();

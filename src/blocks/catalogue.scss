@@ -1,178 +1,179 @@
 .catalogue__header {
-  margin-bottom: 2.1rem;
+    margin-bottom: 2.1rem;
 
-  text-align: center;
+    text-align: center;
 }
 
 .catalogue__cards {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(4, 27.8rem);
-  justify-content: space-between;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 27.8rem);
+    justify-content: space-between;
 }
 
 .card {
-  // width: 100%;
+    // width: 100%;
 
-  position: relative;
+    position: relative;
 }
 
 .card__wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  padding-top: 3.5em;
-  padding-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-top: 3.5em;
+    padding-bottom: 6.4rem;
 }
 
 .card__wrap_color {
-  color: $primary-color;
+    color: $primary-color;
 }
 
 .card__img {
-  width: 27.8rem;
-  height: 32.9rem;
+    width: 27.8rem;
+    height: 32.9rem;
 
-  margin-bottom: 5.5rem;
+    margin-bottom: 5.5rem;
 }
 
 .card__name {
-  max-width: 27.8rem;
+    max-width: 27.8rem;
 
-  margin-bottom: 0.3rem;
-  @include font(400, 2rem, 130%);
-  text-align: center;
+    margin-bottom: 0.3rem;
+    @include font(400, 2rem, 130%);
+    text-align: center;
 }
 
 .card__price-new {
-  margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
 
-  @include font(900, 2.8rem, 140%);
-  letter-spacing: -0.05em;
+    @include font(900, 2.8rem, 140%);
+    letter-spacing: -0.05em;
 }
 
 .card__price-old {
-  position: relative;
-  @include font(700, 2rem, 140%);
-  letter-spacing: -0.05em;
+    position: relative;
+    @include font(700, 2rem, 140%);
+    letter-spacing: -0.05em;
 
-  img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
 }
 
 .card__button {
-  padding: 1.85rem 3.8rem 2.25rem 3.8rem;
-  margin-top: 2rem;
-  display: none;
+    padding: 1.85rem 3.8rem 2.25rem 3.8rem;
+    margin-top: 2rem;
+    display: none;
 
-  @include font(600, 1.6rem, 140%);
+    @include font(600, 1.6rem, 140%);
 
-  &_color {
-    background-color: #0074d4;
-    box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, 0.2),
-      0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241),
-      0 0.538427rem 0.638599rem rgba(0, 116, 212, 0.15),
-      0 0.194738rem 0.230969rem rgba(0, 116, 212, 0.059);
-    color: #ffffff;
-  }
+    &_color {
+        border-radius: 8px;
+        background-color: #0074d4;
+        box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, 0.2),
+            0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241),
+            0 0.538427rem 0.638599rem rgba(0, 116, 212, 0.15),
+            0 0.194738rem 0.230969rem rgba(0, 116, 212, 0.059);
+        color: #ffffff;
+    }
 }
 
 .catalogue__show-all {
-  width: 100%;
+    width: 100%;
 
-  margin-top: -0.3rem;
-  padding-top: 2.4rem;
-  padding-bottom: 2.6rem;
+    margin-top: -0.3rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
 
-  @include font(600, 1.8rem, 130%);
+    @include font(600, 1.8rem, 130%);
 
-  &_color {
-    background: #f3f4f7;
-  }
+    &_color {
+        background: #f3f4f7;
+    }
 }
 
 @media (min-width: 48em) {
-  .card__wrap:hover {
-    width: 33rem;
+    .card__wrap:hover {
+        width: 33rem;
 
-    position: absolute;
-    z-index: 1;
-    margin-left: -2.6rem;
-    padding-bottom: 4.7rem;
+        position: absolute;
+        z-index: 1;
+        margin-left: -2.6rem;
+        padding-bottom: 4.7rem;
 
-    border: 0.1rem solid #f3f4f7;
-    box-shadow: 0 2rem 5.2rem -0.8rem rgba(0, 0, 0, 0.15);
-    border-radius: 1.6rem;
-    cursor: pointer;
-    background-color: #ffffff;
+        border: 0.1rem solid #f3f4f7;
+        box-shadow: 0 2rem 5.2rem -0.8rem rgba(0, 0, 0, 0.15);
+        border-radius: 1.6rem;
+        cursor: pointer;
+        background-color: #ffffff;
 
-    .card__button {
-      display: block;
+        .card__button {
+            display: block;
+        }
     }
-  }
 }
 
 @media (max-width: 48em) {
-  .catalogue__header {
-    margin-bottom: 1.3rem;
-    font-size: 2.8rem;
-  }
-
-  .catalogue__cards {
-    grid-template: repeat(3, 1fr) / repeat(2, 13.9rem);
-  }
-
-  .card {
-    width: 13.9rem;
-
-    position: relative;
-
-    &:nth-child(7) {
-      display: none;
+    .catalogue__header {
+        margin-bottom: 1.3rem;
+        font-size: 2.8rem;
     }
 
-    &:nth-child(8) {
-      display: none;
+    .catalogue__cards {
+        grid-template: repeat(3, 1fr) / repeat(2, 13.9rem);
     }
-  }
 
-  .card__img {
-    width: 100%;
-    height: auto;
+    .card {
+        width: 13.9rem;
 
-    margin-bottom: 1rem;
-  }
+        position: relative;
 
-  .card__wrap {
-    padding-top: 0;
-    padding-bottom: 4.1rem;
-  }
+        &:nth-child(7) {
+            display: none;
+        }
 
-  .card__name {
-    @include font(400, 1.4rem, 130%);
-    margin-bottom: 0.2rem;
-  }
+        &:nth-child(8) {
+            display: none;
+        }
+    }
 
-  .card__price-new {
-    @include font(900, 2rem, 140%);
-    margin-bottom: 0;
-  }
+    .card__img {
+        width: 100%;
+        height: auto;
 
-  .card__price-old {
-    @include font(700, 1.7rem, 140%);
-    margin-top: -0.2rem;
-  }
+        margin-bottom: 1rem;
+    }
 
-  .catalogue__show-all {
-    padding-top: 1.6rem;
-    padding-bottom: 1.7rem;
-    position: relative;
-    top: -1rem;
+    .card__wrap {
+        padding-top: 0;
+        padding-bottom: 4.1rem;
+    }
 
-    @include font(600, 1.6rem, 130%);
-  }
+    .card__name {
+        @include font(400, 1.4rem, 130%);
+        margin-bottom: 0.2rem;
+    }
+
+    .card__price-new {
+        @include font(900, 2rem, 140%);
+        margin-bottom: 0;
+    }
+
+    .card__price-old {
+        @include font(700, 1.7rem, 140%);
+        margin-top: -0.2rem;
+    }
+
+    .catalogue__show-all {
+        padding-top: 1.6rem;
+        padding-bottom: 1.7rem;
+        position: relative;
+        top: -1rem;
+
+        @include font(600, 1.6rem, 130%);
+    }
 }
