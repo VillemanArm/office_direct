@@ -60,7 +60,7 @@ function init() {
             },
             {
                 iconLayout: "default#image",
-                iconImageHref: "../img/map/placemark.svg",
+                iconImageHref: "img/map/placemark.svg",
                 iconImageSize: [70, 100],
                 iconImageOffset: [-25, -90],
             }
@@ -82,7 +82,7 @@ function init() {
             },
             {
                 iconLayout: "default#image",
-                iconImageHref: "../img/map/placemark.svg",
+                iconImageHref: "img/map/placemark.svg",
                 iconImageSize: [45, 64],
                 iconImageOffset: [-22, -60],
             }
@@ -109,7 +109,7 @@ function init() {
                 },
                 {
                     iconLayout: "default#image",
-                    iconImageHref: "../img/map/placemark.svg",
+                    iconImageHref: "img/map/placemark.svg",
                     iconImageSize: [45, 64],
                     iconImageOffset: [-22, -60],
                 }
@@ -133,7 +133,7 @@ function init() {
                 },
                 {
                     iconLayout: "default#image",
-                    iconImageHref: "../img/map/placemark.svg",
+                    iconImageHref: "img/map/placemark.svg",
                     iconImageSize: [70, 100],
                     iconImageOffset: [-25, -90],
                 }
@@ -207,11 +207,6 @@ const swiper = new Swiper(".slider", {
         nextEl: ".slider__arrow-right",
         prevEl: ".slider__arrow-left",
     },
-
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
 });
 
 // send form
@@ -242,6 +237,6 @@ form.addEventListener("submit", (e) => {
     sendForm(user).then((data) => {
         console.log("Письмо успешно отправлено.");
     });
-    
+
     form.reset();
 });
