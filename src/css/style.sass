@@ -1,0 +1,319 @@
+
+
+/*# sourceMappingURL=style.sass.map */
+
+@font-face 
+    font-family: 'Microsoft YaHei UI'
+    src: url('../fonts/Microsoft YaHei Bold.ttf')
+    font-style: normal
+    font-weight: 700
+
+@font-face 
+    font-family: "Inter"
+    font-weight: 400
+    font-display: swap
+    font-style: normal
+    font-named-instance: "Regular"
+    src: url("../fonts/Inter-Regular.woff2") format("woff2")
+
+$header-font: Microsoft YaHei UI
+$primary-color: #FFFBF5
+$second-color: #F0B94D
+$background-color: #37343A
+$block-color: #636362
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+html 
+    font-size: 0.520835vw
+
+
+body
+    background-color: $background-color
+    font-family: 'Inter'
+    color: $primary-color
+
+a
+    color: $primary-color
+    text-decoration: none
+
+h1
+    font-family: $header-font
+    font-size: 6.6rem
+    margin: 0
+
+h2 
+    font-family: $header-font
+    font-size: 6rem
+    margin-bottom: 4rem
+
+img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.container
+    width: 120rem
+    margin-right: auto
+    margin-left: auto
+
+.header
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    column-gap: 6.5rem
+    justify-content: center
+
+.header__link
+    margin-top: 3.2rem
+    z-index: 2
+
+    font-size: 1.8rem
+
+.hero
+    display: grid
+    grid-template-columns: repeat(2, 50%)
+
+.hero__text
+    display: grid
+    align-content: start
+    justify-items: start
+    padding-top: 21.6rem
+
+.hero__header
+    z-index: 2
+    margin-bottom: 0.7rem
+
+    white-space: nowrap
+
+.hero__description
+    font-size: 2.4rem  
+    margin-bottom: 4.2rem
+
+.hero__contact
+    display: block
+    padding: 1.4rem 3.1rem
+    box-sizing: border-box
+
+    font-size: 2.7rem
+
+    background-color: $second-color
+    border: 0.3rem solid $second-color
+    border-radius: 1.1rem
+    color: $primary-color
+
+    &:hover
+        background-color: transparent
+        color: $second-color
+        
+.hero__face-wrap
+    position: relative
+    width: 70rem
+    height: 79.1rem
+
+.hero__face
+    width: 70rem
+    height: 79.1rem
+    position: absolute
+    left: -6.6rem
+    top: -2.1rem
+
+.about
+    margin-top: -7.7rem
+
+.about__content
+    max-width: 990px
+    margin-bottom: 3rem
+
+    font-size: 2.4rem 
+    line-height: 121%
+
+    &:last-child
+        margin-bottom: 16.2rem
+
+.skills__blocks
+    display: grid    
+    grid-template-columns: repeat(4, auto)
+    justify-content: center
+    column-gap: 2rem
+
+.skills__block-wrap
+    width: 28.3rem
+    height: 28.3rem
+    position: relative
+    margin-bottom: 16.2rem
+
+.skills__block
+    position: absolute
+    width: 100%
+    height: 100%
+    display: grid
+    align-content: center
+    z-index: 5
+    
+    background-color: $block-color
+    border-radius: 1.1rem
+    cursor: pointer
+
+    &:hover
+        background-color: $second-color
+        box-shadow: 0 2rem 4rem -0.8rem rgba(0, 0, 0, 0.7)
+
+.skills__block_clicked
+    background-color: $second-color
+    
+    &:hover
+        box-shadow: none
+
+.skills__block-img
+    height: 12.2rem
+    margin-bottom: 2rem
+
+.skills__block-2-img
+        display: grid
+        grid-template-columns: repeat(2, auto)
+        grid-template-rows: 9.5rem
+        justify-content: center
+        column-gap: 1.2rem
+
+.skills_block-title   
+    text-align: center 
+    font-size: 2.4rem 
+
+.skills__list
+    width: 100%
+    display: none
+    position: absolute
+    padding-top: 6.2rem
+    padding-bottom: 2.5rem
+    top: 25rem
+    z-index: 4
+
+    background-color: $block-color
+    border-radius: 1.1rem
+    box-shadow: 0 2rem 4rem -0.8rem rgba(0, 0, 0, 0.7)
+
+.skills__list-item
+    list-style-type: none
+    font-size: 2.2rem
+    margin-bottom: 1.5rem 
+    margin-left: 3rem
+
+.works__blocks
+    display: grid
+    grid-template-columns: repeat(2, 58.6rem)
+    justify-content: center
+    column-gap: 2rem
+    margin-bottom: 16.2rem
+
+.works__block-wrap
+    position: relative
+
+.works__block
+    display: block
+    padding: 2.3rem 0.1rem
+
+    font-size: 2.4rem
+
+    background-color: $block-color
+    border-radius: 1.1rem
+    cursor: pointer
+
+    &:hover
+        background-color: $second-color
+        box-shadow: 0 2rem 3.5rem -0.8rem rgba(0, 0, 0, 0.7)
+
+.works__block_clicked
+    background-color: $second-color
+    
+    &:hover
+        box-shadow: none
+
+.works__webpages
+    width: 100%
+    position: absolute
+    z-index: 3    
+
+.works__list
+    width: 100%
+    display: none
+    position: absolute
+    padding-top: 6.2rem
+    padding-bottom: 2.5rem
+    top: 9rem
+    z-index: 1
+
+    background-color: $block-color
+    border-radius: 1.1rem
+    box-shadow: 0 2rem 4rem -0.8rem rgba(0, 0, 0, 0.7)   
+
+.works__list-item
+    list-style-type: none
+    font-size: 2.2rem
+    margin-bottom: 1.5rem 
+    margin-left: 3rem
+
+.works__webpages-title
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(2, auto)
+    justify-content: center
+    column-gap: 2rem
+
+
+.works__github
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(2, auto)
+    justify-content: center
+    column-gap: 2rem
+
+.works__img
+    height: 7rem
+    display: inline-block
+
+.contacts
+    padding-top: 8.1rem
+
+    &_color
+        background-color: #333036
+
+.contacts__header
+    margin-bottom: 4.9rem
+
+.contacts__content-wrap
+    display: grid
+    grid-template-columns: auto 50rem auto 50rem
+    row-gap: 4.5rem
+    column-gap: 4rem
+    justify-items: start
+    align-items: center
+    justify-content: start
+    padding-bottom: 10.6rem
+
+.contacts__information
+        font-size: 2.4rem
+
+#phone
+    width: 3.9rem
+    height: 6.1rem
+    justify-self: center
+
+
+#telegram
+    width: 5.6rem
+    height: 5.1rem
+    justify-self: center
+
+#mail
+    width: 4.8rem
+    height: 3.8rem
+    justify-self: center
+
+#whatsapp
+    width: 4.9rem
+    height: 4.9rem
+    justify-self: center
