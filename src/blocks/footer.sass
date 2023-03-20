@@ -74,3 +74,63 @@
 
 .footer__contact-inform_phone
     +font(600, 2rem, 140%)
+
+.footer__privacy-mobile
+    display: none
+
+@media (max-width: 48em)
+    .footer
+        padding-top: 4.0rem
+        padding-bottom: 3.8rem
+
+    .footer__wrapper
+        flex-direction: column
+        align-items: start
+
+    .footer__about
+        margin-right: 0
+        margin-left: 0
+
+    .footer__logo
+        margin-bottom: 2.1rem
+        margin-left: 0rem
+
+    .footer__privacy-desktop
+        display: none
+
+    .footer__privacy
+        margin-bottom: 0.7rem
+
+        +font(500, 1.3rem, 140%)
+
+    .footer__rights
+        +font(500, 1.3rem, 140%)
+
+    .footer__links
+        margin-right: 0
+        margin-bottom: 2rem
+
+    .footer__link
+        +font(500, 1.5rem, 140%)
+
+    .footer__contacts
+        margin-bottom: 2rem
+
+    .footer__contact:nth-child(1)
+        margin-bottom: 1.3rem
+        
+
+    .footer__contact:nth-child(2)
+        margin-bottom: 1rem
+
+    .footer__contact-img
+        display: none
+
+    .footer__contact-inform
+        +font(400, 1.5rem, 140%)
+
+    .footer__contact-inform_phone
+        +font(600, 1.5rem, 140%)
+
+    .footer__privacy-mobile
+        display: block
