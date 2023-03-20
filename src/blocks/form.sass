@@ -85,7 +85,7 @@
         +font(500, 1.8rem, 125%)
         color: #FFFFFF
         background: #0074D4
-        box-shadow: 0px 43px 51px rgba(0, 116, 212, 0.2), 0px 12.9632px 15.375px rgba(0, 116, 212, 0.241), 0px 5.38427px 6.38599px rgba(0, 116, 212, 0.15), 0px 1.94738px 2.30969px rgba(0, 116, 212, 0.059)
+        box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, 0.2), 0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241), 0 .538427rem .638599rem rgba(0, 116, 212, 0.15), 0 .194738rem .230969rem rgba(0, 116, 212, 0.059)
         border-radius: .8rem
         border: 1px solid #0074D4
 
@@ -136,6 +136,80 @@
 @media (min-width: 48em)
   .form__button_color:hover
     background: #576077
-    color: #ffffff
     box-shadow: 0 .6rem 1.6rem rgba(255, 255, 255, 0.08)
     border: 0.1rem solid rgba(255, 255, 255, 0.3)
+
+@media (max-width: 48em)
+    .form
+        width: 100%
+        height: auto
+        padding-top: 6.8rem
+        padding-bottom: 4.3rem
+
+        &_color
+            border-radius: 0
+
+    .form__position
+        position: static
+        transform: translate(0, 0)
+
+    .form__header
+        margin-bottom: 0.6rem
+        text-align: center
+
+        +font(900, 2.8rem, 120%)
+        
+    .form__description
+        max-width: 100%
+        margin-bottom: 1.5rem
+        text-align: center
+
+        +font(300, 1.5rem, 150%)
+        
+    .form__element-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 1.4rem
+
+    .form__input
+        width: 24.9rem
+        height: 6.3rem
+        margin: 0 auto 1.2rem auto
+        padding-left: 5rem
+        padding-right: 2rem
+        z-index: 1
+
+        &_color
+            +font(500, 1.6rem, 120%)
+
+    .form__input-name
+        background: url('../img/form/user.svg') #576077 no-repeat 2rem 2.1rem 
+
+    .form__input-tel
+        background: url('../img/form/phone.svg') #576077 no-repeat 2rem 2.1rem         
+
+    .form__label-img
+        width: 2rem
+        height: 2rem
+
+    .form__button
+        z-index: 1
+        width: 24.9rem
+        height: 6.3rem
+        padding-left: 0
+        padding-right: 0
+
+        &_color
+            +font(500, 1.6rem, 125%)         
+
+    .form__checkbox-label
+        width: 24.9rem
+
+        +font(300, 1.2rem, 91.5%)
+
+        &::before
+            margin-right: 0.9rem
+
+    .form__img
+        display: none
