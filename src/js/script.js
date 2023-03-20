@@ -195,7 +195,7 @@ modal.addEventListener("click", (e) => {
 const swiper = new Swiper(".slider", {
     // Optional parameters
     loop: true,
-
+    width: 500,
     //   // If we need pagination
     pagination: {
         el: ".slider-pagination",
@@ -207,6 +207,27 @@ const swiper = new Swiper(".slider", {
         nextEl: ".slider__arrow-right",
         prevEl: ".slider__arrow-left",
     },
+});
+
+const slider = document.querySelector(".slider");
+const sliderButtons = document.querySelectorAll(".slider__button");
+
+sliderButtons.forEach((button) => {
+    if (slider.offsetWidth <= 780) {
+        button.innerHTML = "Тест-драйв";
+    } else {
+        button.innerHTML = "Запись на тест-драйв";
+    }
+});
+
+window.addEventListener("resize", () => {
+    sliderButtons.forEach((button) => {
+        if (slider.offsetWidth <= 780) {
+            button.innerHTML = "Тест-драйв";
+        } else {
+            button.innerHTML = "Запись на тест-драйв";
+        }
+    });
 });
 
 // send form

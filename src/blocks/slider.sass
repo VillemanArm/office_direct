@@ -44,6 +44,23 @@
 
     +font(400, 2.1rem, 160%)
 
+.slider__button
+    padding: 2.5rem 4.85rem 2.9rem 4.85rem
+    margin-bottom: 9.4rem
+
+    +font(600, 1.8rem, 140%)
+
+    &_color
+        color: #FFFFFF
+        background-color: #0074D4
+        box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, 0.2), 0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241), 0 .538427rem .638599rem rgba(0, 116, 212, 0.15), 0 .194738rem .230969rem rgba(0, 116, 212, 0.059)
+        border: 1px solid #0074D4
+
+@media (min-width: 48em)
+    .slider__button_color:hover
+        background: none
+        color: #0074D4
+
 .swiper-pagination-bullet
     width: 0.6rem
     height: 0.6rem
@@ -80,3 +97,64 @@
     top: 50%
     transform: translate(-50%, -50%)
     z-index: 3
+
+@media (max-width: 48em)
+    .slider
+        height: 20rem
+        margin-bottom: 0rem
+
+
+
+    .slider__item
+        height: 100%
+        position: relative
+
+    .slider__img
+        height: 17.2rem
+        
+
+        img
+            object-fit: cover
+            object-position: -8.3rem
+        
+
+    .slider__content
+        width: 20.1rem
+        padding-top: 2.3rem
+
+    .slider__content-header
+        margin-bottom: 1.2rem
+        margin-top: 0
+        
+        +font(500, 1.7rem, 120%)
+        letter-spacing: 0.01em
+
+        &-img
+            width: 1.8rem
+            height: 1.6rem
+            bottom: -0.1rem
+            left: -.3rem
+
+    .slider__content-descripion
+        display: none
+
+    .slider__button
+        padding: 1.1rem 1.75rem 1.3rem 1.75rem
+        margin-bottom: auto
+
+        +font(600, 1.3rem, 140%)
+
+        &_color
+            box-shadow: 0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241), 0 .538427rem .638599rem rgba(0, 116, 212, 0.15), 0 .194738rem .230969rem rgba(0, 116, 212, 0.059)
+
+    .swiper-pagination-bullet
+        width: 0.4rem
+        height: 0.4rem
+
+    .swiper-pagination-bullet-active
+        background-color: #2B3350
+
+    .slider__arrow
+        display: none
+
+    
