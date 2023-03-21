@@ -195,7 +195,6 @@ modal.addEventListener("click", (e) => {
 const swiper = new Swiper(".slider", {
     // Optional parameters
     loop: true,
-    width: 500,
     //   // If we need pagination
     pagination: {
         el: ".slider-pagination",
