@@ -28,21 +28,21 @@ try {
   $mail->isSMTP();
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth   = true;
-  // $mail->SMTPDebug = 2; 
+  $mail->SMTPDebug = 2; 
   $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-  // Настройки вашей почты
+// Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
   $mail->Username   = 'armourblacksmith@gmail.com'; // Логин на почте
-  $mail->Password   = 'gojgirmylnsbdejj'; // Пароль 
+  $mail->Password   = 'ntnewoeafzrgujcq'; // Пароль 
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('armourblacksmith@gmail.com', 'ОфисДирект'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('armourblacksmith@gmail.com', 'Мищенко Максим'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('armourblacksmith@gmail.com');
-//   $mail->addAddress('salexandervl@yandex.ru');
+  $mail->addAddress('belaz4x4@yandex.ru');
 
   // Отправка сообщения
   $mail->isHTML(true);
