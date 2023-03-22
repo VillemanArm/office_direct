@@ -214,8 +214,6 @@ const sliderButtons = document.querySelectorAll(".slider__button");
 sliderButtons.forEach((button) => {
     if (slider.offsetWidth <= 780) {
         button.innerHTML = "Тест-драйв";
-    } else {
-        button.innerHTML = "Запись на тест-драйв";
     }
 });
 
