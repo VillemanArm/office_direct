@@ -1,12 +1,13 @@
 .select__body {
-  display: none;
-  position: absolute;
-  left: -3rem;
-  padding: 1.6rem 3rem 2rem 3rem;
+    display: none;
+    position: absolute;
+    left: -3rem;
+    padding: 1.6rem 3rem 2rem 3rem;
+    z-index: 4;
 }
 
 .select__body_color {
-  background-color: #ffffff;
-  box-shadow: 0 0.5rem 1rem rgba(157, 160, 166, 0.15);
-  border-radius: 0.8rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(157, 160, 166, 0.15);
+    border-radius: 0.8rem;
 }

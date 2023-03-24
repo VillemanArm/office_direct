@@ -262,3 +262,14 @@ form.addEventListener("submit", (e) => {
 // добавляем анимацию
 
 AOS.init();
+
+// facts
+
+$(".facts__item").click(function (e) {
+    $(".facts__item").removeClass("facts__item-active");
+
+    let target = $(e.target.closest(".facts__item"));
+    if (target) {
+        $(this).addClass("facts__item-active");
+    }
+});
