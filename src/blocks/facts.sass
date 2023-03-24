@@ -1,14 +1,17 @@
 .facts
-    padding-top: 10.8em
+    padding-top: 10.8rem
 
 .facts__header
-    margin-bottom: 2.5em
+    margin-bottom: 2.5rem
 
 .facts__description
     margin-bottom: 5.4rem
+    max-width: 117.2rem
 
+    text-align: center
     font-family: 'Manrope'
-    +font(400, 2.3rem, 160)
+    +font(400, 2.3rem, 160%)
+    letter-spacing: -0.03em
 
     color: #576077
 
@@ -17,7 +20,9 @@
     padding-left: 9.9rem
 
 .facts__item
-    padding: 2.6rem 3.1rem 2.1rem 2rem
+    width: 100%
+    padding: 2.3rem 3.1rem 2.1rem 3.8rem
+    margin-bottom: 2.5rem
 
     &:not(:last-child)
         margin-bottom: 2.5rem
@@ -25,3 +30,111 @@
     &_style
         border: 0.1rem solid #F3F4F7
         border-radius: 1.6rem
+
+    div
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.facts__number
+    margin-right: 1.6rem
+
+    +font(900, 3.8rem, 140%)
+    
+    &_color
+        opacity: 0.3
+
+.facts__question
+    +font(600, 2.2rem, 140%)
+
+.facts__status
+    width: 3rem
+    height: 3rem
+
+    &_style
+        background-color: #37A5FF
+        border-radius: 50%
+
+    img
+        width: 70%
+        +center
+        margin-right: auto
+        margin-left: auto
+
+    .facts__status-minus
+        display: none
+
+.facts__answer
+    max-width: 84.2rem
+    margin-top: 1.3rem
+    margin-bottom: 1.2rem
+    display: none
+
+    +font(400, 1.9rem, 140%)
+
+    color: #576077
+
+.facts__item-active
+    background-color: #F5F6FA
+    box-shadow: 0 2rem 5.2rem -.8rem rgba(0, 0, 0, 0.15)
+
+    .facts__answer
+        display: block  
+
+    .facts__status_style
+        background: #0074D4
+
+        .facts__status-plus
+            display: none
+
+        .facts__status-minus
+            display: block
+
+@media (max-width: 48em)
+    .facts
+        padding-top: 4.9rem
+
+    .facts__header
+        margin-bottom: 1.5rem
+        
+    .facts__description
+        margin-bottom: 2.3rem
+
+        +font(400, 1.4rem, 160%)
+
+    .facts__items
+        padding-right: 0
+        padding-left: 0
+
+    .facts__item
+        padding: 1.5rem 1.6rem 1.4rem 1.7rem
+
+        &:not(:last-child)
+            margin-bottom: 1rem
+
+        &_style
+            border-radius: 0.8rem
+
+    .facts__number
+        display: none
+
+    .facts__question
+        max-width: 22.5rem
+
+        +font(600, 1.4rem, 100%)
+
+    .facts__status
+        width: 2.1rem
+        height: 2.1rem
+
+
+    .facts__answer
+        max-width: 100%
+        margin-top: 1rem
+        margin-bottom: 0.5rem
+
+        +font(400, 1.3rem, 120%)
+
+    .facts__item-active
+        box-shadow: 0 2rem 5.2rem -.8rem rgba(0, 0, 0, 0.15)
+
