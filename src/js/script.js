@@ -231,33 +231,77 @@ window.addEventListener("resize", () => {
 
 const form = document.querySelector(".form__element");
 
-const sendForm = (data) => {
-    // отправка данных в файл php
-    return fetch("mail.php", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
+$('#phone').mask("+7 (999) 999-99-99");
+
+const validation = new JustValidate('.form__element');
+
+validation
+    .addField('#name', [
+        {
+            rule: 'minLength',
+            value: 2,
+            errorMessage: 'Имя должно состоять минимум из двух букв!'
         },
-    }).then((res) => res.json());
-};
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); // отмена стандартного поведения кнопки submit
-
-    const dataForm = new FormData(form); // сбор всех данных в input из формы
-    const user = {};
-
-    dataForm.forEach((value, key) => {
-        user[key] = value;
+        {
+            rule: 'maxLength',
+            value: 30,
+            errorMessage: 'Слишком длинное имя!'
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите имя!'
+        }
+    ])
+    .addField('#phone', [
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Введите номер телефона!'
+        },
+        {
+            rule: 'function',
+            validator: function () {
+                const phone = $('#phone').cleanVal();
+                return phone.length === 10;
+            },
+            errorMessage: 'Введите номер телефона полностью!'
+        }
+    ])
+    .addField('#check', [
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Подтвердите свое согласие на обработку личных данных!'
+        },
+    ])
+    .onSuccess((e) => {
+        if (document.querySelector('#check').checked) {
+            const sendForm = (data) => {   // отправка данных в файл php
+                return fetch("mail.php", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8",
+                    },
+                }).then((res) => res.json());
+            };
+    
+            const dataForm = new FormData(e.target); // сбор всех данных в input из формы
+            const user = {};
+        
+            dataForm.forEach((value, key) => {
+                user[key] = value;
+            });
+        
+            sendForm(user).then((data) => {
+                console.log("Письмо успешно отправлено.");
+            });
+        
+            e.target.reset();
+        }         
     });
 
-    sendForm(user).then((data) => {
-        console.log("Письмо успешно отправлено.");
-    });
-
-    form.reset();
-});
 
 // добавляем анимацию
 

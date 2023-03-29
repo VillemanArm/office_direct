@@ -12,6 +12,9 @@
     <script defer src="js/swiper-bundle.js"></script>
     <script defer src="js/aos.js"></script>
     <script defer src="js/jquery-3.6.4.min.js"></script>
+    <!-- <script defer src="js/jquery.maskedinput.min.js"></script> -->
+    <script defer src="js/jquery.mask.min.js"></script>
+    <script defer src="js/just-validate.production.min.js"></script>
     <script defer src="js/script.js"></script>
     <title>ОфисДирект</title>
 </head>
@@ -492,9 +495,11 @@
                                 <input type="text" id="name" name="user-name" autocomplete="off"
                                     class="form__input form__input_color form__input-name" placeholder="Ваше имя">
                             </label>
-                            <label for="phone" class="form__label"></label>
-                            <input type="tel" maxlength="12" id="phone" name="user-phone" autocomplete="off"
-                                class="form__input form__input_color form__input-tel" placeholder="Телефон для связи">
+                            <label for="phone" class="form__label">
+                                <input type="tel" maxlength="12" id="phone" name="user-phone" autocomplete="off"
+                                    class="form__input form__input_color form__input-tel"
+                                    placeholder="Телефон для связи">
+                            </label>
                             <button type="submit" class="button form__button form__button_color">Заказать
                                 звонок</button>
                         </div>

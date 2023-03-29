@@ -109,6 +109,20 @@ h2 {
     text-align: center;
 }
 
+.just-validate-error-label{
+    font-size: 1.5rem;
+}
+
+.form__label > .just-validate-error-label{
+    top: 8.4rem;    
+    position: absolute;
+    z-index: 3;
+}
+
+.form__element-wrapper > .just-validate-error-label{
+    margin-top: .4rem;    
+}
+
 @media (max-width: 48em) {
     html {
         font-size: 3.125vw;
@@ -122,5 +136,22 @@ h2 {
 
     h2 {
         @include font(900, 2.8rem, 120%);
+    }
+
+    .just-validate-error-label{
+        margin-top: -.5rem;
+        margin-bottom: 0.4rem;
+        font-size: 1.2rem;
+    }
+
+    .form__label > .just-validate-error-label{ 
+        position: static;
+
+    }
+    
+    .form__element-wrapper > .just-validate-error-label{
+        top: 2.4rem; 
+        width: 24.9rem;  
+        position: absolute;
     }
 }
