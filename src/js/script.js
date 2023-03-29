@@ -295,6 +295,8 @@ validation
             });
         
             sendForm(user).then((data) => {
+                modal.style.display = "flex";
+                body.classList.add("noscroll");
                 console.log("Письмо успешно отправлено.");
             });
         
