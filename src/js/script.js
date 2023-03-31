@@ -27,124 +27,135 @@ selectItem.forEach((item, i) => {
 });
 
 // map
-let center = [55.67508584336249, 37.50301247021486];
-let placemarkCoordinates = [55.60970044783877, 37.49566439587404];
-const mapElement = document.querySelector("#map-element");
+let flag = 0
 
-function init() {
-    let map = new ymaps.Map("map-element", {
-        center: center,
-        zoom: 11,
-    });
+window.addEventListener('scroll', function () {
+    let scrollY = window.scrollY;
+    let mapOffset = document.querySelector('.map').offsetTop;
+    if ((scrollY >=mapOffset - 800) && (flag == 0)) {
+        let center = [55.67508584336249, 37.50301247021486];
+        let placemarkCoordinates = [55.60970044783877, 37.49566439587404];
+        const mapElement = document.querySelector("#map-element");
 
-    map.controls.remove("geolocationControl"); // удаляем геолокацию
-    map.controls.remove("searchControl"); // удаляем поиск
-    map.controls.remove("trafficControl"); // удаляем контроль трафика
-    map.controls.remove("typeSelector"); // удаляем тип
-    map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove("zoomControl"); // удаляем контрол зуммирования
-    map.controls.remove("rulerControl"); // удаляем контрол правил
-    map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты
+        function init() {
+            let map = new ymaps.Map("map-element", {
+                center: center,
+                zoom: 11,
+            });
 
-    if (mapElement.offsetWidth > 780) {
-        let placemark = new ymaps.Placemark(
-            placemarkCoordinates,
-            {
-                balloonContent: `
-        <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
-          <b>ОфисДирект</b><br>
-          Режим работы:<br>
-          ежедневно с 10 до 19 часов
-        </div>
-`,
-            },
-            {
-                iconLayout: "default#image",
-                iconImageHref: "img/map/placemark.svg",
-                iconImageSize: [70, 100],
-                iconImageOffset: [-25, -90],
+            map.controls.remove("geolocationControl"); // удаляем геолокацию
+            map.controls.remove("searchControl"); // удаляем поиск
+            map.controls.remove("trafficControl"); // удаляем контроль трафика
+            map.controls.remove("typeSelector"); // удаляем тип
+            map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+            map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+            map.controls.remove("rulerControl"); // удаляем контрол правил
+            map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты
+
+            if (mapElement.offsetWidth > 780) {
+                let placemark = new ymaps.Placemark(
+                    placemarkCoordinates,
+                    {
+                        balloonContent: `
+                <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
+                <b>ОфисДирект</b><br>
+                Режим работы:<br>
+                ежедневно с 10 до 19 часов
+                </div>
+        `,
+                    },
+                    {
+                        iconLayout: "default#image",
+                        iconImageHref: "img/map/placemark.svg",
+                        iconImageSize: [70, 100],
+                        iconImageOffset: [-25, -90],
+                    }
+                );
+                map.geoObjects.add(placemark);
+            } else {
+                map.setCenter(placemarkCoordinates, 10);
+
+                let placemark = new ymaps.Placemark(
+                    placemarkCoordinates,
+                    {
+                        balloonContent: `
+                <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
+                    <b>ОфисДирект</b><br>
+                    Режим работы:<br>
+                    ежедневно с 10 до 19 часов
+                </div>
+        `,
+                    },
+                    {
+                        iconLayout: "default#image",
+                        iconImageHref: "img/map/placemark.svg",
+                        iconImageSize: [45, 64],
+                        iconImageOffset: [-22, -60],
+                    }
+                );
+                map.geoObjects.add(placemark);
             }
-        );
-        map.geoObjects.add(placemark);
-    } else {
-        map.setCenter(placemarkCoordinates, 10);
 
-        let placemark = new ymaps.Placemark(
-            placemarkCoordinates,
-            {
-                balloonContent: `
-          <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
-            <b>ОфисДирект</b><br>
-            Режим работы:<br>
-            ежедневно с 10 до 19 часов
-          </div>
-  `,
-            },
-            {
-                iconLayout: "default#image",
-                iconImageHref: "img/map/placemark.svg",
-                iconImageSize: [45, 64],
-                iconImageOffset: [-22, -60],
-            }
-        );
-        map.geoObjects.add(placemark);
-    }
+            window.addEventListener("resize", () => {
+                let width = mapElement.offsetWidth;
+                if (mapElement.offsetWidth <= 780) {
+                    map.setCenter(placemarkCoordinates, 10);
 
-    window.addEventListener("resize", () => {
-        let width = mapElement.offsetWidth;
-        if (mapElement.offsetWidth <= 780) {
-            map.setCenter(placemarkCoordinates, 10);
+                    map.geoObjects.remove(placemark);
+                    placemark = new ymaps.Placemark(
+                        placemarkCoordinates,
+                        {
+                            balloonContent: `
+                    <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
+                    <b>ОфисДирект</b><br>
+                    Режим работы:<br>
+                    ежедневно с 10 до 19 часов
+                    </div>
+            `,
+                        },
+                        {
+                            iconLayout: "default#image",
+                            iconImageHref: "img/map/placemark.svg",
+                            iconImageSize: [45, 64],
+                            iconImageOffset: [-22, -60],
+                        }
+                    );
 
-            map.geoObjects.remove(placemark);
-            placemark = new ymaps.Placemark(
-                placemarkCoordinates,
-                {
-                    balloonContent: `
-            <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
-              <b>ОфисДирект</b><br>
-              Режим работы:<br>
-              ежедневно с 10 до 19 часов
-            </div>
-    `,
-                },
-                {
-                    iconLayout: "default#image",
-                    iconImageHref: "img/map/placemark.svg",
-                    iconImageSize: [45, 64],
-                    iconImageOffset: [-22, -60],
+                    map.geoObjects.add(placemark);
+                } else {
+                    map.setCenter(center, 11);
+
+                    map.geoObjects.remove(placemark);
+                    placemark = new ymaps.Placemark(
+                        placemarkCoordinates,
+                        {
+                            balloonContent: `
+                    <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
+                    <b>ОфисДирект</b><br>
+                    Режим работы:<br>
+                    ежедневно с 10 до 19 часов
+                    </div>
+            `,
+                        },
+                        {
+                            iconLayout: "default#image",
+                            iconImageHref: "img/map/placemark.svg",
+                            iconImageSize: [70, 100],
+                            iconImageOffset: [-25, -90],
+                        }
+                    );
+
+                    map.geoObjects.add(placemark);
                 }
-            );
-
-            map.geoObjects.add(placemark);
-        } else {
-            map.setCenter(center, 11);
-
-            map.geoObjects.remove(placemark);
-            placemark = new ymaps.Placemark(
-                placemarkCoordinates,
-                {
-                    balloonContent: `
-            <div class="balloon" style="width: 150px; height: 100px; line-height: 150%;">
-              <b>ОфисДирект</b><br>
-              Режим работы:<br>
-              ежедневно с 10 до 19 часов
-            </div>
-    `,
-                },
-                {
-                    iconLayout: "default#image",
-                    iconImageHref: "img/map/placemark.svg",
-                    iconImageSize: [70, 100],
-                    iconImageOffset: [-25, -90],
-                }
-            );
-
-            map.geoObjects.add(placemark);
+            });
         }
-    });
-}
 
-ymaps.ready(init);
+        ymaps.ready(init);
+
+        flag = 1
+    }
+})
+
 
 //mobile menu
 

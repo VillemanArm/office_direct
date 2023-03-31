@@ -16,7 +16,13 @@ let paths = {
     dest: baseDir + "/img",
   },
 
+  scripts: {
+    src: baseDir + "/js/*.js",
+    dest: baseDir + "/js",
+  },
+
   cssOutputName: "style.css",
+  jsOutputName: 'script.min.js'
 };
 
 // LOGIC
@@ -28,6 +34,7 @@ const newer = require("gulp-newer");
 const imagemin = require("gulp-imagemin");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCss = require("gulp-clean-css");
+const uglify = require('gulp-uglify-es').default; // объединяем и минифицируем js файлы. Предварительно надо поставить библиотеку npm install --save-dev gulp-uglify-es
 
 function browsersync() {
   browserSync.init({
@@ -87,9 +94,17 @@ function startwatch() {
   }).on("change", browserSync.reload);
 }
 
+function scripts() {
+  return src(paths.scripts.src)
+    .pipe(concat(paths.jsOutputName))
+    .pipe(uglify())
+    .pipe(dest(paths.scripts.dest))
+}
+
 exports.browsersync = browsersync;
 exports.assets = series(styles, images);
 exports.styles = styles;
+exports.scripts = scripts;
 exports.images = images;
 exports.images = cleanimg;
-exports.default = parallel(images, styles, browsersync, startwatch);
+exports.default = parallel(images, styles, scripts, browsersync, startwatch);
