@@ -16,13 +16,13 @@ let paths = {
     dest: baseDir + "/img",
   },
 
-  scripts: {
-    src: baseDir + "/js/*.js",
-    dest: baseDir + "/js",
-  },
+  // scripts: {
+  //   src: baseDir + "/js/*.js",
+  //   dest: baseDir + "/js",
+  // },
 
   cssOutputName: "style.css",
-  jsOutputName: 'script.min.js'
+  // jsOutputName: 'script.min.js'
 };
 
 // LOGIC
@@ -104,7 +104,7 @@ function scripts() {
 exports.browsersync = browsersync;
 exports.assets = series(styles, images);
 exports.styles = styles;
-exports.scripts = scripts;
+// exports.scripts = scripts;
 exports.images = images;
 exports.images = cleanimg;
-exports.default = parallel(images, styles, scripts, browsersync, startwatch);
+exports.default = parallel(images, styles, browsersync, startwatch);
