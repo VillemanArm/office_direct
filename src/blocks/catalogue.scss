@@ -65,7 +65,7 @@
 }
 
 .card__button {
-    padding: 1.85rem 3.8rem 2.25rem 3.8rem;
+    padding: 1.75rem 3.7rem 2.15rem 3.7rem;
     margin-top: 2rem;
     display: none;
 
@@ -79,6 +79,7 @@
             0 0.538427rem 0.638599rem rgba(0, 116, 212, 0.15),
             0 0.194738rem 0.230969rem rgba(0, 116, 212, 0.059);
         color: #ffffff;
+        border: solid 0.1rem #0074d4;
     }
 }
 
@@ -115,6 +116,18 @@
             display: block;
         }
     }
+
+    .card__button_color:hover {    
+        background-color: #ffffff;
+        color: #0074d4; 
+          
+    }
+
+    .catalogue__show-all_color:hover {
+        background-color: #0074d4;
+        color: #ffffff;
+    }
+
 }
 
 @media (max-width: 48em) {

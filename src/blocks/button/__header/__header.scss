@@ -9,6 +9,13 @@
   }
 }
 
+@media (min-width: 48em) {
+  .button__header_color:hover {
+    background-color: #0074d4;
+    color: #ffffff;
+  }
+}
+
 @media (max-width: 48em) {
   .button__header {
     display: none;

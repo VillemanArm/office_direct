@@ -4,3 +4,9 @@
   white-space: nowrap;
   cursor: pointer;
 }
+
+@media (min-width: 48em) {
+  .select__item:hover {
+    border-bottom: solid .1rem #2b3350;
+  }
+}
